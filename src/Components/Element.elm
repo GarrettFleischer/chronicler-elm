@@ -3,18 +3,10 @@ module Element exposing (..)
 import Html exposing (Html, text, div, img)
 import Html.Attributes exposing (src)
 import Msgs exposing (..)
-import Model exposing (..)
+import Models exposing (..)
 
 
 ---- UPDATE ----
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    ( model, Cmd.none )
-
-
-
 ---- VIEW ----
 
 
