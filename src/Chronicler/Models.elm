@@ -27,11 +27,6 @@ type LinkType
 type alias NodeId =
     Unique Id
 
-
-type alias Variable =
-    Maybe String
-
-
 type alias Actions =
     List Action
 
@@ -47,6 +42,8 @@ type alias Links =
 type alias Strings =
     List String
 
+type Variable =
+    Variable NodeId String
 
 type Operator
     = Eq
@@ -98,6 +95,9 @@ label : String -> Action
 label name =
     Label Unique.unique name
 
+variable : String -> Variable
+variable name =
+    Variable Unique.unique name
 
 initialModel : Route -> Model
 initialModel route =
