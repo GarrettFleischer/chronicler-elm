@@ -1,6 +1,5 @@
 module Component.Model exposing (..)
 
-import Unique exposing (..)
 import Common exposing (..)
 
 
@@ -61,7 +60,9 @@ type Component
 
 newComponent : Component -> Model
 newComponent component =
-    { id = Unique.unique, component = component }
+    { id = 0
+    , component = component
+    }
 
 
 model : Model

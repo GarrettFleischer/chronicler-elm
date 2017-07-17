@@ -11,7 +11,8 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    { component = Component.model }
+    { component = Component.model
+    }
 
 
 init : ( Model, Cmd Msg )
