@@ -1,10 +1,11 @@
 module Common exposing (..)
 
-import Unique exposing (..)
+import Uuid
+import Random.Pcg exposing (Seed, initialSeed, step)
 
 
 type alias UID =
-    Unique Id
+    Uuid.Uuid
 
 
 type alias Strings =
