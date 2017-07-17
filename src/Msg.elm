@@ -1,11 +1,15 @@
 module Msg exposing (..)
 
+import Component.Msg as Component
+
 
 type Msg
     = NoOp
-    | MessageForComponent
-    | MessageForNode
-    | MessageForScene
-    | MessageForProject
-    | MessageForHome
+    | MsgForComponent Component.Msg
 
+
+
+-- | MsgForNode
+-- | MsgForScene
+-- | MsgForProject
+-- | MsgForHome

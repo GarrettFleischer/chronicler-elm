@@ -80,7 +80,6 @@ type Component
     | Scene NodeId String Components
     | Node NodeId Int Int String Actions
 
-
 scene : String -> Components -> Component
 scene name components =
     Scene Unique.unique name components
