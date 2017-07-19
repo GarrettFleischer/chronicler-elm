@@ -58,13 +58,17 @@ type Component
     | GosubScene MUID MUID
 
 
-newComponent : Component -> Model
-newComponent component =
-    { id = 0
+newComponent : UID -> Component -> Model
+newComponent uid component =
+    { id = uid
     , component = component
     }
 
 
 model : Model
 model =
-    newComponent (Text "")
+    newComponent 0 (Text "Hello World")
+
+
+
+--(Next Nothing (Just 0))

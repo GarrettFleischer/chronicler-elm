@@ -1,18 +1,21 @@
 module View.Chronicler exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
 import Html.Lazy exposing (..)
 import Msg exposing (..)
-import Model exposing (..)
+import Model as Main exposing (..)
+import Component.Model exposing (..)
+import Component.View.Component exposing (..)
 
 
-view : Model -> Html Msg
+view : Main.Model -> Html Msg
 view model =
     let
         control =
             model.component
     in
-        div
-            []
-            [ lazy text "Chronicler" ]
+        div []
+            [ h1 [] [ lazy text "Chronicler" ]
+            , div [] [ lazy component (newComponent 1 (Next Nothing Nothing)) ]
+            , div [] [ lazy component (newComponent 2 (Text "World")) ]
+            ]

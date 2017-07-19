@@ -18,5 +18,8 @@ update msgFor model =
 updateComponent : Component.Msg -> Model -> Model
 updateComponent msg model =
     case msg of
-        Update component ->
-            { model | component = component }
+        Update uid component ->
+            if uid == model.id then
+                { model | component = component }
+            else
+                model
